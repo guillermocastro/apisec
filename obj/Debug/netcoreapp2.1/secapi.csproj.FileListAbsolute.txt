@@ -1,0 +1,15 @@
+C:\Dev\secapi\bin\Debug\netcoreapp2.1\secapi.deps.json
+C:\Dev\secapi\bin\Debug\netcoreapp2.1\secapi.runtimeconfig.json
+C:\Dev\secapi\bin\Debug\netcoreapp2.1\secapi.runtimeconfig.dev.json
+C:\Dev\secapi\bin\Debug\netcoreapp2.1\secapi.dll
+C:\Dev\secapi\bin\Debug\netcoreapp2.1\secapi.pdb
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.csprojAssemblyReference.cache
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.csproj.CoreCompileInputs.cache
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.RazorAssemblyInfo.cache
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.RazorAssemblyInfo.cs
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.AssemblyInfoInputs.cache
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.AssemblyInfo.cs
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.RazorTargetAssemblyInfo.cache
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.dll
+C:\Dev\secapi\obj\Debug\netcoreapp2.1\secapi.pdb
