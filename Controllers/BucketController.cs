@@ -21,7 +21,7 @@ namespace secapi.Controllers
         }
 
         [HttpGet("{BucketId}",Name="GetBucket")]
-        public ActionResult<Bucket> GetByBucketId(string BucketId)
+        public ActionResult<Bucket> GetByBucketId(int BucketId)
         {
             var Bucket = _context.Bucket.Find(BucketId);
 
@@ -39,7 +39,7 @@ namespace secapi.Controllers
             return CreatedAtRoute("GetBucket",new {GetByBucketId=Bucket.BucketId,Bucket});
         }
         [HttpPut("{BucketId}")]
-        public IActionResult Update(string BucketId,Bucket data)
+        public IActionResult Update(int BucketId,Bucket data)
         {
             var Bucket=_context.Bucket.Find(BucketId);
             if (Bucket==null)
@@ -65,7 +65,7 @@ namespace secapi.Controllers
             return NoContent();
         }
         [HttpDelete("{BucketId}")]
-        public IActionResult Delete(string BucketId)
+        public IActionResult Delete(int BucketId)
         {
             var Bucket=_context.Bucket.Find(BucketId);
             if (Bucket==null)

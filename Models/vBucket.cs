@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace secapi.Models
 {
-    [Table("Bucket",Schema="dba")]
-    public class Bucket
+    [Table("vBucket",Schema="dba")]
+    public class vBucket
     {
         [Key]
         public int BucketId {get;set;}
@@ -22,8 +22,21 @@ namespace secapi.Models
         public DateTime? StartDate {get;set;}
         public DateTime? DueDate {get;set;}
         public bool IsSuppressed {get;set;}
-        public decimal? PlannedDuration {get;set;}
-        public decimal? PlannedCost {get;set;}
         public int Priority {get;set;}
+        public string Tree {get;set;}
+        public string Container {get;set;}
+        public int? Level {get;set;}
+        public decimal? PlannedDuration {get;set;}
+        public decimal? CumulativePlannedDuration {get;set;}
+        public decimal? CumulativeRealDuration {get;set;}
+        public decimal? PlannedCost {get;set;}
+        public decimal? CumulativePlannedCost {get;set;}
+        public decimal? RealCost {get;set;}
+        public int? Server {get;set;}
+        public int? Client {get;set;}
+        public string BucketTypeName {get;set;}
+        public string StateList {get;set;}
+        public string ParentList {get;set;}
+        public string CSS {get;set;}
     }
 }

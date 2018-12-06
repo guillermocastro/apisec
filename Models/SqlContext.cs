@@ -12,5 +12,6 @@ namespace secapi.Models
         {
         }
         public virtual DbSet<Bucket> Bucket { get; set; }
+        public virtual DbSet<vBucket> vBucket { get; set; }
     }
 }
