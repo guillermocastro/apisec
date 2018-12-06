@@ -13,5 +13,11 @@ namespace secapi.Models
         }
         public virtual DbSet<Bucket> Bucket { get; set; }
         public virtual DbSet<vBucket> vBucket { get; set; }
+        public virtual DbSet<BucketType> BucketType { get; set; }
+        public virtual DbSet<HourType> HourType { get; set; }
+        public virtual DbSet<Hour> Hour { get; set; }
+        public virtual DbSet<Resource> Resource { get; set; }
+        public virtual DbSet<Edge> Edge { get; set; }
+        public virtual DbSet<EdgeType> EdgeType { get; set; }
     }
 }
