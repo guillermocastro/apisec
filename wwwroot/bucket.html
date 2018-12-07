@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12 column">
+        <div class="bucket l{{b.level}}" ng-repeat="b in vBuckets">
+            <div class="bucketbox" style="{{b.css}}">
+                <div class="bucketName col-md12 {{b.state}}">
+                    <div class="nav">
+                        <a class="mainmenu">Add</a>
+                        <a class="mainmenu">Status</a>
+                        <a class="mainmenu">Hours</a>
+                        <a class="mainmenu">Edit</a>
+                        <a class="mainmenu">Delete</a>
+                    </div>
+                    <label title="{{b.comments}}">{{b.bucketName}}</label>
+                </div>
+                <div class="bucketbox col-md-2"><label>State: </label>{{b.state}} {{b.bucketTypeName}}</div>
+                <div class="bucketbox col-md-1"><label>Reference: </label>{{b.reference}}</div>                
+                <div class="bucketbox col-md-2"><label>Owner: </label>{{b.resourceName}}</div>
+                <div class="bucketbox col-md-2"><label>Start date: </label>{{b.startDate}}</div>
+                <div class="bucketbox col-md-2"><label>Due date: </label>{{b.dueDate}}</div>
+                <div class="bucketbox col-md-1"><label>Duration: </label>{{b.bucketDuration}}</div>
+                <div class="bucketbox col-md-1"><label>Cum. Duration: </label> {{b.cumulativeRealDuration}}</div>
+                <div class="bucketbox col-md-1"><label>Cost: </label> {{b.realCost}}</div>
+            </div>
+        </div>
+    </div>
+</div>

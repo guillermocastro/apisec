@@ -2,20 +2,47 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>PIM API 1.1</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script id="angularScript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-animate.min.js"></script>
-    
+    <title>Project Management</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/CSS/vam.css">
+    <script src="scripts/angular.min.js""></script>
+    <script src="scripts/app.js""></script>
+    <script src="scripts/buckets.component.js"></script>
 </head>
 <body>
-    <div class="nav">
-        <h1>API</h1>
+    <div ng-app="mainApp" ng-controller="menuController">
+        <div class="nav">
+            <a ng-click="activecomponent='Bucket';" class="mainmenu">Buckets</a>
+            <a ng-click="activecomponent='Device';" class="mainmenu">Devices</a>
+            <a ng-click="activecomponent='SqlServer';" class="mainmenu">SQL Servers</a>
+            <a ng-click="activecomponent='RemoteJob';" class="mainmenu">Remote Jobs</a>
+            <a ng-click="activecomponent='Disk';" class="mainmenu">Disks</a>
+            <a ng-click="activecomponent='Performance';" class="mainmenu">Monitor</a>
+        </div>
+        <bucket-Component></bucket-Component>
+        
+        <div ng-controller="deviceController" ng-hide="activecomponent!='Device'">
+            Devices
+        </div>
+        <div ng-controller="diskController" ng-hide="activecomponent!='Disk'">
+            Disk
+        </div>
+        <div ng-controller="sqlserverController" ng-hide="activecomponent!='SqlServer'">
+            SqlServer
+        </div>
+        <div ng-controller="monitorController" ng-hide="activecomponent!='Performance'">
+            Performance monitor
+        </div>
+        <div ng-controller="remotejobsController" ng-hide="activecomponent!='RemoteJob'">
+            Remote Jobs
+        </div>
     </div>
-    <h3>Notes</h3>
-    <p>Release 1.0.0</p>
 </body>
 </html>

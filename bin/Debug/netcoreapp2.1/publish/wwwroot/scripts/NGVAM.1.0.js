@@ -6,13 +6,13 @@ var config = {
         "Accept": 'application/json',
         "Content-Type": 'application/json',
         "cache-control": 'no-cache',
-        "Application": 'Time and Resources Management'
+        "Application": 'Valkian Intelligent Management'
     }
 };
 angular.module('VAM', [])
     .run(function ($rootScope, $window, $document) {
         $rootScope.company = "V&A";
-        $rootScope.product = "Time and Resources Management";
+        $rootScope.product = "VCentre Management";
         $rootScope.author = "Guillermo Castro";
         $rootScope.version = "V 1.0.0";
         $rootScope.UserName = $window.localStorage.getItem("UserName");
@@ -106,27 +106,29 @@ angular.module('VAM', [])
             $rootScope.token = '';
         };
     });
-angular.module("VAM").controller("MainController",function($scope, $rootScope,$scope,$http){
-    $rootScope.components=["Bucket","Device","SqlServer","RemoteJob"];
-    $rootScope.activecomponent="Bucket";
-});
-angular.module("VAM").controller("BucketsController", function ($scope, $rootScope,$scope,$http) { 
-    $scope.Buckets=[];
-    $scope.vBuckets=[];
-    console.log("Buckets"); 
-    $scope.GetvBuckets=function(){
-        console.log("$scope.GetvBuckets");
-        var s=baseURL+api+"vBucket";
+
+angular.module("VAM").controller("VCentre", function ($scope, $rootScope,$http) { 
+    $scope.VCentre=[];
+    console.log("VCentre"); 
+    $scope.GetVCentreAll=function(){
+        console.log("$scope.GetVCentreAll");
+        var s=baseURL+api+"VCentre";
         console.log(s);
         $http.get(s).then(function(response){
-            $scope.vBuckets=response.data;
-            console.log(VCentre);
+            $scope.VCentre=response.data;
+            //console.log(VCentre);
         },function(response){
             console.log("Error");
         })
     };
-    $scope.GetvBuckets();
-    console.log("Running VAM");
+    $scope.SaveVCentre=function(VMID,NAME,Purpose,Owner,Department,KeyApplications,State,DataImportUTC){
+        console.log("Saving data...");
+        console.log(purpose);
+    };
+    console.log("going...");
+    $scope.GetVCentreAll();
+    console.log($scope.VCentre);
+
 });
 angular.module("VAM").controller("HR", function ($scope, $rootScope,$http, API) {
     console.log("Human Resources Management in progress");

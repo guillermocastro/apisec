@@ -1,0 +1,13 @@
+div.vm{
+    border-style: solid;
+    border-color: darkblue;
+    border-width: 1px;
+    border-radius:  5px 5px;
+    height: 250px;
+}
+input,textarea{
+    font-size:0.8em;
+}
+textarea{
+    height: 100px;
+}
